@@ -72,11 +72,20 @@ li {
 }
 
 a {
-    color: white
+    color: white;
+    transition: color .25s ease;
+}
+
+a i {
+  transition: transform .25s ease;
 }
 
 a:hover {
     color: greenyellow;
+}
+
+a:hover i {
+  transform: scale(1.15);
 }
 
 img {
@@ -86,4 +95,11 @@ img {
     border-radius: 50%;
     margin-bottom: 20px;
     border: 5px solid purple;
+}
+
+@media (max-width: 1000px) {
+
+  body {
+    display: block;
+  }
 }
