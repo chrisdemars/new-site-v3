@@ -7,7 +7,7 @@ this site is temporary, so whatever.
 
 html {
     box-sizing: border-box;
-    background: linear-gradient(180deg, #bada55, purple);
+    min-height: 100%;
 }
 
 *,
@@ -24,9 +24,10 @@ body {
     align-items: center;
     margin: 0;
     padding: 0;
-    height: 100vh;
     font-family: 'Josefin Sans', sans-serif;
     color: white;
+    background: linear-gradient(180deg, #bada55, purple);
+    background-repeat: no-repeat;
 }
 
 .wrapper {
@@ -80,11 +81,13 @@ a i {
   transition: transform .25s ease;
 }
 
-a:hover {
+a:hover,
+a:focus {
     color: greenyellow;
 }
 
-a:hover i {
+a:hover i,
+a:focus i {
   transform: scale(1.15);
 }
 
@@ -100,6 +103,11 @@ img {
 @media (max-width: 1000px) {
 
   body {
-    display: block;
+    align-items: flex-start;
+  }
+
+  .wrapper {
+    width: 90%;
+    padding-bottom: 20px;
   }
 }
